@@ -17,7 +17,7 @@
     },
     "TWILIO_NUMBER": {
       "description": "An SMS and MMS enabled Twilio number. Not required, but will be used for display if set.",
-      "required": "false"
+      "required": false
     }
   }
 }
