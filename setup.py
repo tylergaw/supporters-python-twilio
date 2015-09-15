@@ -24,7 +24,7 @@ REQUIREMENTS = [
     'gevent==1.0.1',
     'gunicorn==19.3.0',
     'requests==2.7.0',
-    'Jinja2==2.8',
+    'twilio==4.5.0',
 ]
 
 TEST_REQUIREMENTS = [
@@ -71,8 +71,8 @@ class RunTests(TestCommand):
 setup(
     name='supporters_twilio',
     version=VERSION,
-    description='%%description%%',
-    url='https://github.com/thegroundwork/supporters_twilio',
+    description='An example of signing up new Supporters using The Groundwork API through SMS and a Flask Application',
+    url='https://github.com/tylergaw/supporters-python-twilio',
     long_description=get_readme(),
     author='The Groundwork',
     author_email='info@thegroundwork.com',
