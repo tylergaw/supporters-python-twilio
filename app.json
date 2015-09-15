@@ -1,0 +1,19 @@
+{
+  "name": "Supporters: Python Twilio",
+  "description": "An example of signing up new Supporters using The Groundwork API through SMS and a Flask Application",
+  "repository": "https://github.com/tylergaw/supporters-python-twilio",
+  "website": "http://thegroundwork.com",
+  "logo": "https://developer.dev.thegroundwork.com/assets/thegroundwork-heroku-btn.png",
+  "env": {
+    "ENV": {
+      "description": "The environment your app will be run in. One of; local, dev, prod, test",
+      "value": "dev"
+    },
+    "GW_API_URL": {
+      "description": "Your GW API url. (ex: https://api.dev.thegroundwork.com/)"
+    },
+    "GW_CLIENT_ID": {
+      "description": "Your GW API client id."
+    }
+  }
+}

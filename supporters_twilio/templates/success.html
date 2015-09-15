@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block page_title %}
+  Thanks for joining!
+{% endblock %}
+
+{% block body %}
+  <div class="container container--success">
+    <header>
+      <h4 class="typography--extra-bold">Thanks for joining!</h4>
+    </header>
+    <div class="container__content">
+      <p class="typography--subhead">
+        We sent a welcome email to<br>
+        <b class="typography--extra-bold">{{email}}</b>
+      </p>
+      <p>
+        You’ll receive periodic updates and information about the work we’re doing.
+      </p>
+      <a href="/" class="link-back">Back</a>
+    </div>
+  </div>
+{% endblock %}
