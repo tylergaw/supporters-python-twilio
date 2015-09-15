@@ -18,7 +18,13 @@ try:
     API_URL = os.environ['GW_API_URL']
     API_CLIENT_ID = os.environ['GW_CLIENT_ID']
 except KeyError:
-    raise KeyError('You must set GW_API_URL and GW_CLIENT_ID environment variables.')
+    raise KeyError('You must set GW_API_URL, GW_CLIENT_ID environment variables.')
+
+# The Twilio number is required, it's just used in the display.
+try:
+    TWILIO_NUMBER = os.environ['TWILIO_NUMBER']
+except IndexError:
+    TWILIO_NUMBERT = 'your Twilio number'
 
 class Supporter:
     bucket_url = API_URL + 'bucket'
@@ -34,7 +40,7 @@ class Supporter:
 
 @app.route('/', methods=['GET'])
 def index():
-    return '<h2 style="text-align:center;font-family:arial;">Text your email address to (917) 242-4019</h2>'
+    return '<h2 style="text-align:center;font-family:arial;">Text your email address to {}</h2>'.format(TWILIO_NUMBER)
 
 
 @app.route('/signup', methods=['GET', 'POST'])

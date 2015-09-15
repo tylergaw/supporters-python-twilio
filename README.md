@@ -55,6 +55,9 @@ vim ~/.virtualenvs/supporters-python-twilio/bin/postactivate
 export ENV=local
 export GW_API_URL=https://api.url.com/ #trailing slash here please
 export GW_CLIENT_ID=<client_id>
+
+# not required to function, but a nice-to-have for display:
+export TWILIO_NUMBER=<your_sms_and_mms_enabled_twilio_number>
 ```
 
 and be sure to unset any vars when leaving the virtualenv
@@ -65,6 +68,7 @@ vim ~/.virtualenvs/supporters-python-twilio/bin/postdeactivate
 unset ENV
 unset GW_API_URL
 unset GW_CLIENT_ID
+unset TWILIO_NUMBER
 ```
 
 and finally, reactivate your newly minted virtualenv
