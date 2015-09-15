@@ -6,6 +6,7 @@ class DevConfig(object):
     DEBUG = False
     LOGGING_LEVEL = logging.INFO
     TESTING = False
+    SECRET_KEY = 'dev'
 
 
 class ProdConfig(object):
@@ -18,12 +19,14 @@ class LocalConfig(object):
     DEBUG = True
     LOGGING_LEVEL = logging.DEBUG
     TESTING = False
+    SECRET_KEY = 'local'
 
 
 class TestConfig(object):
     DEBUG = False
     LOGGING_LEVEL = logging.INFO
     TESTING = True
+    SECRET_KEY = 'test'
 
 
 def _config_logger(app):
