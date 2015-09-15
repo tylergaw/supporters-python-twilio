@@ -23,8 +23,8 @@ except KeyError:
 # The Twilio number is required, it's just used in the display.
 try:
     TWILIO_NUMBER = os.environ['TWILIO_NUMBER']
-except IndexError:
-    TWILIO_NUMBERT = 'your Twilio number'
+except:
+    TWILIO_NUMBER = 'your Twilio number'
 
 class Supporter:
     bucket_url = API_URL + 'bucket'
