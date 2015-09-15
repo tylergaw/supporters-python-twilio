@@ -38,10 +38,16 @@ class Supporter:
 #         email=request.args.get('email')
 #     )
 
-@app.route('/', methods=['GET', 'POST'])
-def hello():
+@app.route('/', methods=['GET'])
+def index():
+    return '<h2 style="text-align:center;font-family:arial;">Text your email address to (877) 941-0896</h2>'
+
+
+@app.route('/signup', methods=['GET', 'POST'])
+def signup():
     resp = twilio.twiml.Response()
-    resp.message('hi, robot')
+    with resp.message('Thanks for Joining!') as m:
+        m.media(url_for('static', filename='images/thankyou.jpg', _external=True))
     return str(resp)
 
 # @app.route('/', methods=['GET', 'POST'])
