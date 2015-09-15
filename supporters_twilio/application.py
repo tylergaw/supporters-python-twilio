@@ -40,7 +40,7 @@ class Supporter:
 
 @app.route('/', methods=['GET'])
 def index():
-    return '<h2 style="text-align:center;font-family:arial;">Text your email address to (877) 941-0896</h2>'
+    return '<h2 style="text-align:center;font-family:arial;">Text your email address to (917) 242-4019</h2>'
 
 
 @app.route('/signup', methods=['GET', 'POST'])
