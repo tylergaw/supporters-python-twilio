@@ -47,7 +47,7 @@ def index():
 def signup():
     resp = twilio.twiml.Response()
     with resp.message('Thanks for Joining!') as m:
-        m.media(url_for('static', filename='images/thankyou.jpg', _external=True))
+        m.media(url_for('static', filename='images/confirm.jpg', _external=True))
     return str(resp)
 
 # @app.route('/', methods=['GET', 'POST'])
