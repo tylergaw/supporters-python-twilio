@@ -50,15 +50,13 @@ def signup():
         session['email'] = body
 
         if not re.match(r'[^@]+@[^@]+\.[^@]+', body):
-            message = """Sorry, we couldn't find a valid email address in your
-                    message. Please try again."""
+            message = 'Sorry, we couldn\'t find a valid email address in your message. Please try again.'
             session['counter'] = 0
             session['email'] = ''
             resp.message(message)
             return str(resp)
         else:
-            message = """Thanks for your interest in our mailing list.
-                    To confirm you want to join using {} reply to this message with \"YES\"""".format(body)
+            message = 'Thanks for your interest in our mailing list. To confirm you want to join using {} reply to this message with \"YES\"'.format(body)
             resp.message(message)
             return str(resp)
     else:
